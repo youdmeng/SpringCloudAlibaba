@@ -1,0 +1,25 @@
+server:
+  port: 23377
+
+spring:
+  application:
+    name: cloudalibaba-nacos-config-cclient
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.10.58:8848
+      config:
+        server-addr: 192.168.10.58:8848
+        file-extension: yaml
+        group: dev
+        namespace: a2438b02-01e1-4a3c-959c-600d93183d22
+  profiles:
+    active: dev
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+
